@@ -1,0 +1,35 @@
+# Virtual environment
+jongo/
+
+# Python bytecode
+*.pyc
+*.pyo
+__pycache__/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+logs/
+
+# SQLite database files (if using SQLite)
+*.sqlite3
+
+# Flask-specific files
+instance/
+
+# Static and media cache (if applicable)
+staticfiles/
+media/
+
+# Editor and system files
+.DS_Store
+Thumbs.db
+*.swp
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
