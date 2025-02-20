@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Advent Pro, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    width: 100vw; /* Ensures full width */
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    padding: 15px;
+    text-align: center;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5vw; /* Responsive font size */
+}
+
+/* 📱 HAMBURGER MENU (HIDDEN ON DESKTOP) */
+.menu-btn {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-right: -200px;
+}
+/* Full-screen sections */
+.full-screen {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    width: 100vw;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    height: 100vh;;
+    background: url('/static/media/Babyelephant.jpg') no-repeat center center/cover;
+    padding: 5vw;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    flex-wrap: wrap; /* Wraps content on smaller screens */
+}
+
+/* Text Content */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; /* Centers text */
+    margin: 2vw;
+}
+
+/* Responsive Heading */
+.content h1 {
+    font-size: 8vw; /* Responsive font size */
+    margin-bottom: 1vw;
+    white-space: nowrap;
+    opacity: 0.9;
+}
+
+.content p {
+    font-size: 2vw;
+    font-family: Advent Pro, sans-serif; /* Keep font consistent */
+}
+
+/* Image Section */
+.photo {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centers image */
+    margin: 2vw;
+}
+
+.photo img {
+    width: 18vw; /* Responsive image size */
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+}
+
+/* Background Images */
+#about { background: url('/static/media/about-bg.jpg') no-repeat center center/cover; }
+#projects { background: url('/static/media/projects-bg.jpg') no-repeat center center/cover; }
+#contact { background: url('/static/media/contact-bg.jpg') no-repeat center center/cover; }
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+    border-radius: 50%;
+}
+
+/* 📱 MOBILE PHONES (HAMBURGER MENU) */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8); /* Transparent black background */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links li a {
+        font-size: 5vw;
+    }
+
+        /* Show menu when active */
+    .nav-links.show {
+        right: 0; /* Moves into view */
+    }
+
+    /* Stack items */
+    #home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 12vw;
+    }
+
+    
+    .photo img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* 📱 TABLETS */
+@media (max-width: 1024px) {
+    #home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 10vw;
+    }
+
+    .photo img {
+        width: 20vw;
+    }
+}

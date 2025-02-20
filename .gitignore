@@ -19,10 +19,6 @@ logs/
 # Flask-specific files
 instance/
 
-# Static and media cache (if applicable)
-staticfiles/
-media/
-
 # Editor and system files
 .DS_Store
 Thumbs.db
