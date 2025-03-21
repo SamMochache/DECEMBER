@@ -122,11 +122,12 @@ html {
     position: relative;
     background: url('/static/media/freesavannah.jpg') no-repeat center center/cover;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Move content to the left */
     padding-left: 5%;
+    flex-wrap: wrap;
 }
 
 /* Dark Overlay */
@@ -135,7 +136,7 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    width: 60%; /* Only covers the left half */
+    width: 80%; /* Only covers the left half */
     height: 100%;
     background: rgba(0, 0, 0, 0.6); /* Dark overlay */
     z-index: 1;
@@ -147,7 +148,7 @@ html {
     z-index: 2;
     color: white;
     text-align: left;
-    max-width: 55%; /* Keeps text inside the left half */
+    max-width: 80%; /* Keeps text inside the left half */
     padding: 40px;
     line-height: 2; /* Improves readability */
     letter-spacing: 2px; /* Adjusts spacing between letters */
